@@ -1,10 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="description" content="Página principal de la pagina web dedicada a la venta de pizzas"/>
+    <meta name="keywords" content="pizzas, pizzeria, carta, conocenos"/>
+    <link rel="icon" href="../img/iconoPizza.jpg" type="image/jpg"/>
+    <!-- Espacio para meter las hojas de estilos o los diferentes scrips-->
+    <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
+    <title>Pizzería EII</title>
 </head>
 <body>
+<header>
+    <a href="../index.html" title="Ir a la página principal">Pizzería EII</a>
+</header>
+<nav>
+    <ul id="lista_menu">
+        <li><a href="../index.html">Principal</a></li>
+        <li><a href="conocenos.html">Conócenos</a></li>
+        <li><a href="productos.html">Productos</a>
+            <ul>
+                <li><a href="../xml/pizzas.xml">Pizzas</a></li>
+                <li><a href="../xml/pizzasEspeciales.xml">Pizzas Especiales</a></li>
+            </ul>
+        </li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="locales.html">Locales</a></li>
+    </ul>
+</nav>
+<main>
+    <section>
+        <h1>Accede a nuestra magnifica oferta de pizzas!</h1>
+        <input type="button" onclick="location.href='../xml/pizzas.xml';" value="Pizzas tradicionales"/>
+        <input type="button" onclick="location.href='../xml/pizzasEspeciales.xml';" value="Pizzas especiales"/>
+    </section>
+</main>
+
+<footer>
+    <div>
+            <span>
+                &copy; Copyright 2018 - Pizzería EII -  Derechos reservados
+            </span>
+        <span>
+                Pagina web hecha por:
+                <a href="mailto:uo236974@uniovi.es">Martín Peláez Díaz</a>
+            </span>
+    </div>
+
+    <div>
+        <h3>Mapa web</h3>
+        <ul>
+            <li><a href="../index.html">Principal</a></li>
+            <li><a href="conocenos.html">Conócenos</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="locales.html">Locales</a></li>
+        </ul>
+    </div>
+
+    <div class="accesibilidad">
+
+    </div>
+</footer>
 
 </body>
-</html>
