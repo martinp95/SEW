@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type='text/xsl' href='pizzas.xsl'?>
+<pizzas>
+    <pizza>
+        <nombre>Tio Joroba</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Salami</ingrediente>
+            <ingrediente>Jamón</ingrediente>
+            <ingrediente>Serrano</ingrediente>
+            <ingrediente>Champiñón</ingrediente>
+            <ingrediente>Tabasco</ingrediente>
+            <ingrediente>Ajo</ingrediente>
+            <ingrediente>Pimiento</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>11</precio>
+        <calorias cantidad="100" unidad="gr" unidadCal="Kcal">350</calorias>
+        <rutaFoto>../img/tioJoroba.jpg</rutaFoto>
+    </pizza>
+    
+    <pizza>
+        <nombre>Luna Llena</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Cabrales</ingrediente>
+            <ingrediente>Bacon</ingrediente>
+            <ingrediente>Cebolla</ingrediente>
+            <ingrediente>Huevo Escalfado</ingrediente>
+            <ingrediente>Pimiento</ingrediente>
+            <ingrediente>Ajo</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>12</precio>
+        <rutaFoto>../img/lunaLlena.jpg</rutaFoto>
+    </pizza>
+
+    <pizza>
+        <nombre>Michelangello</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Bacon</ingrediente>
+            <ingrediente>Champiñón</ingrediente>
+            <ingrediente>Cebolla</ingrediente>
+            <ingrediente>Nata</ingrediente>
+            <ingrediente>Pimienta Negra</ingrediente>
+            <ingrediente>Pimientos</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>13</precio>
+        <rutaFoto>../img/michelangello.jpg</rutaFoto>
+    </pizza>
+    
+    <pizza>
+        <nombre>Noruega</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Salmón</ingrediente>
+            <ingrediente>Ahumado</ingrediente>
+            <ingrediente>Gambas</ingrediente>
+            <ingrediente>Huevo Batido</ingrediente>
+            <ingrediente>Espárragos</ingrediente>
+            <ingrediente>Pimiento</ingrediente>
+            <ingrediente>Sucedáneo de caviar</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>15</precio>
+        <calorias cantidad="100" unidad="gr" unidadCal="Kcal">350</calorias>
+        <rutaFoto>../img/noruega.jpg</rutaFoto>
+    </pizza>
+    
+    <pizza>
+        <nombre>Bechamel-Atún</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Jamón Serrano</ingrediente>
+            <ingrediente>Atún</ingrediente>
+            <ingrediente>Bechamel</ingrediente>
+            <ingrediente>Alcachofas</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>15</precio>
+        <rutaFoto>../img/bechamelAtun.jpg</rutaFoto>
+    </pizza>
+
+    <pizza>
+        <nombre>Bechamel-Ahumados</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Salmón Ahumado</ingrediente>
+            <ingrediente>Bechamel</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>12</precio>
+        <rutaFoto>../img/bechamelAhumados.jpg</rutaFoto>
+    </pizza>
+
+    <pizza>
+        <nombre>Bechamel-Jamón</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Salmón</ingrediente>
+            <ingrediente>Jamón Serrano</ingrediente>
+            <ingrediente>Bechamel</ingrediente>
+            <ingrediente>Pimiento</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>14</precio>
+        <rutaFoto>../img/bechamelJamon.jpg</rutaFoto>
+    </pizza>
+    
+    <pizza>
+        <nombre>Queso-Champiñon</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Cabrales</ingrediente>
+            <ingrediente>Champiñón</ingrediente>
+            <ingrediente>Emmental</ingrediente>
+            <ingrediente>Alcaparras</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>12</precio>
+        <rutaFoto>../img/quesoChampiñon.jpg</rutaFoto>
+    </pizza>
+    
+    <pizza>
+        <nombre>Campesina</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Albahaca</ingrediente>
+            <ingrediente>Queso Havarti</ingrediente>
+            <ingrediente>Aceite de ajo</ingrediente>
+        </ingredientes>
+        <precio>10</precio>
+        <calorias cantidad="100" unidad="gr" unidadCal="Kcal">350</calorias>
+        <rutaFoto>../img/campesina.jpg</rutaFoto>
+    </pizza>
+    
+    <pizza>
+        <nombre>Siciliana</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Cebolla</ingrediente>
+            <ingrediente>Bacon</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Gambas</ingrediente>
+            <ingrediente>Chiles</ingrediente>
+            <ingrediente>Nata</ingrediente>
+            <ingrediente>Ajo</ingrediente>
+            <ingrediente>Albahaca</ingrediente>
+        </ingredientes>
+        <precio>13</precio>
+        <rutaFoto>../img/siciliana.jpg</rutaFoto>
+    </pizza>
+
+    <pizza>
+        <nombre>Leonesa</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Castaña en Almíbar</ingrediente>
+            <ingrediente>Cecina</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>12</precio>
+        <rutaFoto>../img/leonesa.jpg</rutaFoto>
+    </pizza>
+
+    <pizza>
+        <nombre>Light</nombre>
+        <ingredientes>
+            <ingrediente>Tomate natural</ingrediente>
+            <ingrediente>Cebolla</ingrediente>
+            <ingrediente>Pimiento natural</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Pimienta negra</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>10</precio>
+        <calorias cantidad="100" unidad="gr" unidadCal="Kcal">350</calorias>
+        <rutaFoto>../img/light.jpg</rutaFoto>
+    </pizza>
+</pizzas>

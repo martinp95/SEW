@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+        <!ELEMENT pizzas (pizza)*>
+        <!ELEMENT pizza (nombre, ingredientes, precio, calorias?, rutaFoto)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT ingredientes (ingrediente+)>
+        <!ELEMENT ingrediente (#PCDATA)>
+        <!ELEMENT precio (#PCDATA)>
+        <!ELEMENT calorias (#PCDATA)>
+        <!ATTLIST calorias
+                cantidad CDATA #REQUIRED
+                unidad CDATA #REQUIRED
+                unidadCal CDATA #FIXED "Kcal">
+        <!ELEMENT rutaFoto (#PCDATA)>

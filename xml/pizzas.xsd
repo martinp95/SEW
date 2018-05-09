@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="pizzas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="pizza"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="pizza">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nombre"/>
+                <xs:element ref="ingredientes"/>
+                <xs:element ref="precio"/>
+                <xs:element minOccurs="0" ref="calorias"/>
+                <xs:element ref="rutaFoto"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="nombre" type="xs:string"/>
+    <xs:element name="ingredientes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="ingrediente"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ingrediente" type="xs:string"/>
+    <xs:element name="precio" type="xs:double"/>
+    <xs:element name="calorias">
+        <xs:complexType mixed="true">
+            <xs:attribute name="cantidad" use="required"/>
+            <xs:attribute name="unidad" use="required"/>
+            <xs:attribute name="unidadCal" default="Kcal">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Kcal"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="rutaFoto" type="xs:string"/>
+</xs:schema>

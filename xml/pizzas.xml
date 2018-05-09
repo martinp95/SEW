@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type='text/xsl' href='pizzas.xsl'?>
+<pizzas>
+    <pizza>
+        <nombre>Romana</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Anchoas</ingrediente>
+            <ingrediente>Oregano</ingrediente>
+        </ingredientes>
+        <precio>10</precio>
+        <calorias cantidad="100" unidad="gr" unidadCal="Kcal">350</calorias>
+        <rutaFoto>../img/romana.jpg</rutaFoto>
+    </pizza>
+
+    <pizza>
+        <nombre>Capricciosa</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Jamon cocido</ingrediente>
+            <ingrediente>Champiñón</ingrediente>
+            <ingrediente>Huevo escalfado</ingrediente>
+            <ingrediente>Gambas</ingrediente>
+            <ingrediente>Aceitunas negras</ingrediente>
+            <ingrediente>Oregano</ingrediente>
+        </ingredientes>
+        <precio>10</precio>
+        <rutaFoto>../img/capricciosa.jpg</rutaFoto>
+    </pizza>
+    
+    <pizza>
+        <nombre>Cuatro Estaciones</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Jamon cocido</ingrediente>
+            <ingrediente>Champiñón</ingrediente>
+            <ingrediente>Bacon</ingrediente>
+            <ingrediente>Atún</ingrediente>
+            <ingrediente>Alcachofas</ingrediente>
+            <ingrediente>Alcaparras</ingrediente>
+            <ingrediente>Aceitunas</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>11</precio>
+        <calorias cantidad="100" unidad="gr" unidadCal="Kcal">350</calorias>
+        <rutaFoto>../img/cuatroEstaciones.jpg</rutaFoto>
+    </pizza>
+
+    <pizza>
+        <nombre>Marinera</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Atún</ingrediente>
+            <ingrediente>Berberechos</ingrediente>
+            <ingrediente>Mejillones</ingrediente>
+            <ingrediente>Gambas</ingrediente>
+            <ingrediente>Anchoas</ingrediente>
+            <ingrediente>Alcaparras</ingrediente>
+            <ingrediente>Aceitunas</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>11</precio>
+        <rutaFoto>../img/marinera.jpg</rutaFoto>
+    </pizza>
+
+    <pizza>
+        <nombre>Vegetariana</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Champiñón</ingrediente>
+            <ingrediente>Espárragos</ingrediente>
+            <ingrediente>Alcachofas</ingrediente>
+            <ingrediente>Alcaparras</ingrediente>
+            <ingrediente>Pimiento</ingrediente>
+            <ingrediente>Aceitunas</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>12</precio>
+        <rutaFoto>../img/vegetariana.jpg</rutaFoto>
+    </pizza>
+
+    <pizza>
+        <nombre>Cuatro Quesos</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Cabrales</ingrediente>
+            <ingrediente>Massdam</ingrediente>
+            <ingrediente>Gouda</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>10</precio>
+        <calorias cantidad="100" unidad="gr" unidadCal="Kcal">350</calorias>
+        <rutaFoto>../img/cuatroQuesos.jpg</rutaFoto>
+    </pizza>
+
+    <pizza>
+        <nombre>Tropical</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Jamón Cocido</ingrediente>
+            <ingrediente>Piña</ingrediente>
+            <ingrediente>Espárragos</ingrediente>
+            <ingrediente>Pimiento</ingrediente>
+            <ingrediente>Emmental</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>11</precio>
+        <rutaFoto>../img/tropical.jpg</rutaFoto>
+    </pizza>
+
+    <pizza>
+        <nombre>Boloñesa</nombre>
+        <ingredientes>
+            <ingrediente>Salada boloñesa</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+            <ingrediente>Calabacín</ingrediente>
+        </ingredientes>
+        <precio>12</precio>
+        <rutaFoto>../img/boloñesa.jpg</rutaFoto>
+    </pizza>
+    
+    <pizza>
+        <nombre>Barbacoa</nombre>
+        <ingredientes>
+            <ingrediente>Salsa Barbacoa</ingrediente>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Bacon</ingrediente>
+            <ingrediente>Ternera</ingrediente>
+            <ingrediente>Pollo</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>12</precio>
+        <rutaFoto>../img/barbacoa.jpg</rutaFoto>
+    </pizza>
+
+    <pizza>
+        <nombre>Carbonara</nombre>
+        <ingredientes>
+            <ingrediente>Salsa Carbonara</ingrediente>
+            <ingrediente>Bacon</ingrediente>
+            <ingrediente>Champiñon</ingrediente>
+            <ingrediente>Cebolla</ingrediente>
+            <ingrediente>Pimienta Negra</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Nata</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>13</precio>
+        <calorias cantidad="100" unidad="gr" unidadCal="Kcal">350</calorias>
+        <rutaFoto>../img/carbonara.jpg</rutaFoto>
+    </pizza>
+
+    <pizza>
+        <nombre>Napoli</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Chorizo</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Ajo</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>12</precio>
+        <rutaFoto>../img/napoli.jpg</rutaFoto>
+    </pizza>
+
+    <pizza>
+        <nombre>Prosciutto</nombre>
+        <ingredientes>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Jamon Cocido</ingrediente>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>10</precio>
+        <calorias cantidad="100" unidad="gr" unidadCal="Kcal">350</calorias>
+        <rutaFoto>../img/prosciutto.jpg</rutaFoto>
+    </pizza>
+    
+    <pizza>
+        <nombre>Margarita</nombre>
+        <ingredientes>
+            <ingrediente>Mozzarella</ingrediente>
+            <ingrediente>Orégano</ingrediente>
+        </ingredientes>
+        <precio>9</precio>
+        <calorias cantidad="100" unidad="gr" unidadCal="Kcal">350</calorias>
+        <rutaFoto>../img/margarita.jpg</rutaFoto>
+    </pizza>
+</pizzas>
