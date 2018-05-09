@@ -53,20 +53,23 @@
                                     <xsl:value-of select="nombre"/>
                                 </h5>
                                 <span>
-                                    <strong>Ingredientes:</strong>
+                                    <strong>Ingredientes:
+                                        <br></br>
+                                    </strong>
                                     <xsl:for-each select="ingredientes/ingrediente">
                                         <xsl:value-of select="."/><xsl:text> </xsl:text>
                                     </xsl:for-each>
                                 </span>
                                 <span>
-                                    <strong>Precio:
+                                    <strong><br></br>Precio:
                                     </strong>
                                     <xsl:value-of select="precio"/>
                                 </span>
 
                                 <xsl:if test=" calorias != ''">
                                     <span>
-                                        <strong>Calorías:
+                                        <strong><br></br>Calorías:
+                                            <br></br>
                                         </strong>
                                         <xsl:value-of select="calorias"/><xsl:text> </xsl:text><xsl:value-of
                                             select="calorias/@unidadCal"/><xsl:text> por </xsl:text><xsl:value-of
@@ -81,7 +84,7 @@
                 <footer>
                     <div>
                         <span>
-                            &#169; Copyright 2018 - Pizzería EII -  Derechos reservados
+                            &#169; Copyright 2018 - Pizzería EII - Derechos reservados
                         </span>
                         <span>
                             Pagina web hecha por:
@@ -92,11 +95,21 @@
                     <div>
                         <h3>Mapa web</h3>
                         <ul>
-                            <li><a href="index.html">Principal</a></li>
-                            <li><a href="#">Conocenos</a></li>
-                            <li><a href="#">Productos</a></li>
-                            <li><a href="#">Contacto</a></li>
-                            <li><a href="#">Locales</a></li>
+                            <li>
+                                <a href="index.html">Principal</a>
+                            </li>
+                            <li>
+                                <a href="#">Conocenos</a>
+                            </li>
+                            <li>
+                                <a href="#">Productos</a>
+                            </li>
+                            <li>
+                                <a href="#">Contacto</a>
+                            </li>
+                            <li>
+                                <a href="#">Locales</a>
+                            </li>
                         </ul>
                     </div>
 
@@ -109,7 +122,6 @@
     </xsl:template>
 
     <xsl:template match="rutaFoto">
-        <xsl:variable name="rutaFoto" select="."/>
 
         <a href="{.}">
             <xsl:text> </xsl:text>
