@@ -2,7 +2,12 @@ const reloj = {
     hours: 0,
     minutes: 0,
     seconds: 0,
+    monthNames: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+        "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+    dayNames: ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"],
     interval: null,
+    dateDom: null,
+    newDate: null,
     hoursDom: null,
     minutesDom: null,
     secondsDom: null,
@@ -10,6 +15,8 @@ const reloj = {
     init: function () {
         let self = this;
 
+        this.newDate = new Date();
+        this.dateDom = $('#date');
         this.hoursDom = $('#hours');
         this.minutesDom = $('#minutes');
         this.secondsDom = $('#seconds');
@@ -26,12 +33,15 @@ const reloj = {
     },
 
     updateDom: function () {
+        this.dateDom.text(this.dayNames[this.newDate.getDay()] + " " + this.newDate.getDate()
+            + ' ' + this.monthNames[this.newDate.getMonth()] + ' ' + this.newDate.getFullYear());
         this.hoursDom.text(this.toDoubleDigit(this.hours));
         this.minutesDom.text(this.toDoubleDigit(this.minutes));
         this.secondsDom.text(this.toDoubleDigit(this.seconds));
     },
 
     intervalCallback: function () {
+        this.newDate.setDate(this.newDate.getDate());
         this.hours = new Date().getHours();
         this.minutes = new Date().getMinutes();
         this.seconds = new Date().getSeconds();
