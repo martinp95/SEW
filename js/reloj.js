@@ -25,6 +25,7 @@ const reloj = {
         }, 1000);
 
     },
+
     toDoubleDigit: function (num) {
         if (num < 10) {
             return "0" + parseInt(num, 10);
