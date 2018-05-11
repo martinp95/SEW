@@ -5,9 +5,7 @@ const map = {
     mapDom: null,
 
     init: function () {
-        let self = this;
-        this.mapDom = $('#mapa');
-        self.localizacionCliente();
+        this.localizacionCliente();
     },
 
     localizacionCliente: function () {
@@ -15,14 +13,16 @@ const map = {
     },
 
     mostrarPosicion: function (position) {
+        this.mapDom = document.querySelector('#map');
         this.latitude = position.coords.latitude;
         this.longitude = position.coords.longitude;
         this.accuracy = position.coords.accuracy;
-        this.mapDom.text("Latitud:" + this.latitude + ", Longitude:"
-            + this.longitude + ", Accuracy:" + this.accuracy);
+        this.mapDom.innerHTML = "Latitud:" + this.latitude + ", Longitude:"
+            + this.longitude + ", Accuracy:" + this.accuracy;
     },
 
     mostrarErrores: function (error) {
+        this.mapDom = document.querySelector('#map');
         switch (error.code) {
             case error.PERMISSION_DENIED:
                 this.mapDom.innerHTML = "User denied the request for Geolocation.";
@@ -40,6 +40,6 @@ const map = {
     }
 };
 
-$(document).ready(function () {
+window.onload = function () {
     map.init();
-});
+};
