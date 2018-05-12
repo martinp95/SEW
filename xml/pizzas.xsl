@@ -8,10 +8,22 @@
                 <meta name="keywords" content="pizzas, pizzeria, carta"/>
                 <link rel="icon" href="../img/iconoPizza.jpg" type="image/jpg"/>
                 <!-- Espacio para meter las hojas de estilos o los diferentes scrips-->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                <script type="text/javascript" src="../js/reloj.js" language="JavaScript"></script>
                 <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
                 <title>Pizzería EII</title>
             </head>
             <body>
+                <div id="reloj">
+                    <p id="date"></p>
+                    <ul>
+                        <li id="hours"></li>
+                        <li class="dot">:</li>
+                        <li id="minutes"></li>
+                        <li class="dot">:</li>
+                        <li id="seconds"></li>
+                    </ul>
+                </div>
                 <header>
                     <a href="../index.html" title="Ir a la página principal">Pizzería EII</a>
                 </header>
@@ -96,19 +108,19 @@
                         <h3>Mapa web</h3>
                         <ul>
                             <li>
-                                <a href="index.html">Principal</a>
+                                <a href="../index.html">Principal</a>
                             </li>
                             <li>
-                                <a href="#">Conocenos</a>
+                                <a href="../html/conocenos.html">Conócenos</a>
                             </li>
                             <li>
-                                <a href="#">Productos</a>
+                                <a href="../html/productos.html">Productos</a>
                             </li>
                             <li>
-                                <a href="#">Contacto</a>
+                                <a href="../html/contacto.html">Contacto</a>
                             </li>
                             <li>
-                                <a href="#">Locales</a>
+                                <a href="../html/locales.html">Locales</a>
                             </li>
                         </ul>
                     </div>
