@@ -2,14 +2,15 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Página principal de la pagina web dedicada a la venta de pizzas"/>
+    <meta name="author" content="Martin Pelaez Diaz"/>
     <meta name="keywords" content="pizzas, pizzeria, carta, conocenos"/>
+    <meta name="description" content="Página principal de la pagina web dedicada a la venta de pizzas"/>
     <link rel="icon" href="../img/iconoPizza.jpg" type="image/jpg"/>
-    <!-- Espacio para meter las hojas de estilos o los diferentes scrips-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/reloj.js" language="JavaScript"></script>
     <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="../js/mapa.js" language="JavaScript"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/reloj.js" language="JavaScript"></script>
+
     <title>Pizzería EII</title>
 </head>
 <body>
@@ -26,6 +27,7 @@
 <header>
     <a href="../index.html" title="Ir a la página principal">Pizzería EII</a>
 </header>
+
 <nav>
     <ul id="lista_menu">
         <li><a href="../index.html">Principal</a></li>
@@ -40,12 +42,7 @@
         <li><a href="locales.html">Locales</a></li>
     </ul>
 </nav>
-<main>
-    <section>
-        <p id="map"></p>
-    </section>
-</main>
-
+<main></main>
 <footer>
     <div>
         <span>
@@ -72,5 +69,9 @@
 
     </div>
 </footer>
-
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz8bcl1V11zR9SPmGhFtiA0oHgalrE60g&callback=mapa.mostrar">
+</script>
+<script src="../js/mapa.js"></script>
 </body>
+</html>

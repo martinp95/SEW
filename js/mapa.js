@@ -1,45 +1,63 @@
-const map = {
-    latitude: null,
-    longitude: null,
-    accuracy: null,
-    mapDom: null,
+"use strict";
 
-    init: function () {
-        this.localizacionCliente();
-    },
+class Mapa {
+    constructor() {
+        this.datos = new Map();
+        this.inicializar();
+        let tamano = $(window).height() - $("a").outerHeight(true) - $("footer").outerHeight(true);
+        $("main").css("height", "" + tamano + "px");
+    }
 
-    localizacionCliente: function () {
-        navigator.geolocation.getCurrentPosition(this.mostrarPosicion, this.mostrarErrores);
-    },
-
-    mostrarPosicion: function (position) {
-        this.mapDom = document.querySelector('#map');
-        this.latitude = position.coords.latitude;
-        this.longitude = position.coords.longitude;
-        this.accuracy = position.coords.accuracy;
-        this.mapDom.innerHTML = "Latitud:" + this.latitude + ", Longitude:"
-            + this.longitude + ", Accuracy:" + this.accuracy;
-    },
-
-    mostrarErrores: function (error) {
-        this.mapDom = document.querySelector('#map');
-        switch (error.code) {
-            case error.PERMISSION_DENIED:
-                this.mapDom.innerHTML = "User denied the request for Geolocation.";
-                break;
-            case error.POSITION_UNAVAILABLE:
-                this.mapDom.innerHTML = "Location information is unavailable.";
-                break;
-            case error.TIMEOUT_ERR:
-                this.mapDom.innerHTML = "The request to get user location timed out.";
-                break;
-            case error.UNKNOWN_ERR:
-                this.mapDom.innerHTML = "An unknown error occurred.";
-                break;
+    inicializar() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(this.obtener, this.errores);
+        } else {
+            alert("Geolocación no es soportada por navegador.");
         }
     }
-};
 
-window.onload = function () {
-    map.init();
-};
+    obtener(posicion) {
+        let coordenadas = posicion.coords;
+        mapa.datos.set('Latitud', coordenadas.latitude);
+        mapa.datos.set('Longitud', coordenadas.longitude);
+        mapa.mostrar();
+    }
+
+    mostrar() {
+        let localizacion = {
+            lat: this.datos.get("Latitud"),
+            lng: this.datos.get("Longitud")
+        };
+        let map = new google.maps.Map(document.getElementsByTagName('main')[0], {
+            zoom: 15,
+            center: localizacion
+        });
+        let marker = new google.maps.Marker({
+            position: localizacion,
+            map: map
+        });
+
+        let marcadores = [
+            ['Pizzeria: Uniovi EII', 43.354762, -5.851274],
+            ['Pizzeria: M. Fontan', 43.360299, -5.845672],
+            ['Pizzeria: P. San Francisco', 43.361734, -5.850688]
+        ];
+
+        let i;
+        for (i = 0; i < marcadores.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(marcadores[i][1], marcadores[i][2]),
+                title: marcadores[i][0],
+                map: map
+            });
+        }
+
+    }
+
+    errores(error) {
+        alert('Error: ' + error.code + ' ' + error.message);
+    }
+
+}
+
+let mapa = new Mapa();
