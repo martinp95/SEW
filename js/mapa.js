@@ -34,7 +34,9 @@ class Mapa {
         });
         let marker = new google.maps.Marker({
             position: localizacion,
-            map: map
+            title: "Posición actual",
+            map: map,
+            icon: '../img/userLocation.png'
         });
 
         let marcadores = [
