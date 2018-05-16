@@ -32,11 +32,16 @@ class Mapa {
             zoom: 15,
             center: localizacion
         });
+
+        let infoWindow = new google.maps.InfoWindow({map: map});
+        infoWindow.setPosition(localizacion);
+        infoWindow.setContent('Ubucacion actual');
+
+
         let marker = new google.maps.Marker({
             position: localizacion,
             title: "Posición actual",
-            map: map,
-            icon: '../img/userLocation.png'
+            map: map
         });
 
         let marcadores = [
@@ -57,7 +62,27 @@ class Mapa {
     }
 
     errores(error) {
-        alert('Error: ' + error.code + ' ' + error.message);
+        let marcadores = [
+            ['Pizzeria: Uniovi EII', 43.354762, -5.851274],
+            ['Pizzeria: M. Fontan', 43.360299, -5.845672],
+            ['Pizzeria: P. San Francisco', 43.361734, -5.850688]
+        ];
+
+        let map = new google.maps.Map(document.getElementsByTagName('main')[0], {
+            zoom: 15,
+            center: new google.maps.LatLng(marcadores[0][1], marcadores[0][2])
+        });
+
+        let i, marker;
+        for (i = 0; i < marcadores.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(marcadores[i][1], marcadores[i][2]),
+                title: marcadores[i][0],
+                map: map
+            });
+        }
+
+        alert('Error: ' + error.message);
     }
 
 }
