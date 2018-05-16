@@ -8,6 +8,7 @@
     <!-- Espacio para meter las hojas de estilos o los diferentes scrips-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/reloj.js" language="JavaScript"></script>
+
     <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
     <title>Pizzería EII</title>
 </head>
@@ -46,17 +47,27 @@
         <h3>En esta seccion podrá enviar sus comentarios y sugerencias</h3>
         <p>Rellena los campos para hacernos llegar cualquier informacion.</p>
 
-        <form action="">
-            Nombre:*<br>
-            <input type="text" name="nombre" placeholder="Martín"/><br>
+        <form name="contacto" method="post" action="">
+
+            <label for="nombre">Nombre:*<br></label>
+            <input id="nombre" type="text" name="nombre" placeholder="Martín" pattern="[A-Za-z]{3,}" maxlength="10"
+                   required/><br>
 
             <label for="apellido">Apellidos:*<br></label>
-            <input id="apellido" type="text" name="apellidos" placeholder="Pelaez Diaz"/><br>
+            <input id="apellido" type="text" name="apellido" placeholder="Pelaez Diaz" pattern="[A-Za-z]{3,}"
+                   maxlength="25" required/><br>
+
             <label for="email">Email:*<br></label>
-            <input id="email" type="email" name="email" placeholder="ejemple@ejemplo.com"><br>
+            <input id="email" type="email" name="email" placeholder="ejemplo@ejemplo.com" required><br>
+
             <label for="comentario">Comentarios:*<br></label>
             <textarea id="comentario" rows="4" cols="50" name="comentario"
-                      placeholder="Inserte sus sugerencias aqui..."></textarea>
+                      placeholder="Inserte sus sugerencias aqui..." maxlength="500" required></textarea>
+            <p>
+                <input type="button" id="enviar" value="Enviar"/>
+                <input type="button" id="borrar" value="Borrar información"/>
+            </p>
+
         </form>
     </section>
 </main>
@@ -87,5 +98,6 @@
 
     </div>
 </footer>
+<script src="../js/formularioContacto.js"></script>
 </body>
 </html>
