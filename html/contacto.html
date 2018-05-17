@@ -47,14 +47,14 @@
         <h3>En esta seccion podrá enviar sus comentarios y sugerencias</h3>
         <p>Rellena los campos para hacernos llegar cualquier informacion.</p>
 
-        <form name="contacto" method="post" action="">
+        <form name="contacto" method="post" action="../php/insertarComentario.php">
 
             <label for="nombre">Nombre:*<br></label>
             <input id="nombre" type="text" name="nombre" placeholder="Martín" pattern="[A-Za-z]{3,}" maxlength="10"
                    required/><br>
 
-            <label for="apellido">Apellidos:*<br></label>
-            <input id="apellido" type="text" name="apellido" placeholder="Pelaez Diaz" pattern="[A-Za-z]{3,}"
+            <label for="apellidos">Apellidos:*<br></label>
+            <input id="apellidos" type="text" name="apellidos" placeholder="Pelaez Diaz" pattern="[A-Za-z]{3,}"
                    maxlength="25" required/><br>
 
             <label for="email">Email:*<br></label>
