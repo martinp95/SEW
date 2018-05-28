@@ -10,6 +10,7 @@
                 <!-- Espacio para meter las hojas de estilos o los diferentes scrips-->
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
                 <script type="text/javascript" src="../js/reloj.js" language="JavaScript"></script>
+                <script type="text/javascript" src="../js/carrito.js" language="JavaScript"></script>
                 <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
                 <title>Pizzería EII</title>
             </head>
@@ -59,11 +60,13 @@
                         <h1>Pizzas</h1>
                         <xsl:for-each select="pizzas/pizza">
                             <div>
-                                <!--Mirar como se mete el link <a> de la imagen y la <img>-->
                                 <xsl:apply-templates select="rutaFoto"/>
-                                <h5>
+                                <h3>
                                     <xsl:value-of select="nombre"/>
-                                </h5>
+                                </h3>
+
+                                <xsl:apply-templates select="."/>
+
                                 <span>
                                     <strong>Ingredientes:
                                         <br></br>
@@ -78,7 +81,7 @@
                                     <xsl:value-of select="precio"/>
                                 </span>
 
-                                <xsl:if test=" calorias != ''">
+                                <xsl:if test=" calorias != '' ">
                                     <span>
                                         <strong><br></br>Calorías:
                                             <br></br>
@@ -131,6 +134,10 @@
                 </footer>
             </body>
         </html>
+    </xsl:template>
+
+    <xsl:template match="pizza">
+        <input type="button" id="añadir" onclick="carrito.addElemento('{./nombre}','{./precio}');" value="Añadir"/>
     </xsl:template>
 
     <xsl:template match="rutaFoto">
