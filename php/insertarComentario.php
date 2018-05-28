@@ -1,40 +1,123 @@
-<?php
-require 'conexion.php';
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página principal de la pagina web dedicada a la venta de pizzas"/>
+    <meta name="keywords" content="pizzas, pizzeria, carta, conocenos"/>
+    <link rel="icon" href="../img/iconoPizza.jpg" type="image/jpg"/>
+    <!-- Espacio para meter las hojas de estilos o los diferentes scrips-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/reloj.js" language="JavaScript"></script>
+    <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
+    <title>Pizzería EII</title>
+</head>
+<body>
+<div id="reloj">
+    <p id="date"></p>
+    <ul>
+        <li id="hours"></li>
+        <li class="dot">:</li>
+        <li id="minutes"></li>
+        <li class="dot">:</li>
+        <li id="seconds"></li>
+    </ul>
+</div>
+<header>
+    <a href="../index.html" title="Ir a la página principal">Pizzería EII</a>
+</header>
+<nav>
+    <ul id="lista_menu">
+        <li><a href="../index.html">Principal</a></li>
+        <li><a href="../html/conocenos.html">Conócenos</a></li>
+        <li><a href="../html/productos.html">Productos</a>
+            <ul>
+                <li><a href="../xml/pizzas.xml">Pizzas</a></li>
+                <li><a href="../xml/pizzasEspeciales.xml">Pizzas Especiales</a></li>
+            </ul>
+        </li>
+        <li><a href="../html/contacto.html">Contacto</a></li>
+        <li><a href="../html/locales.html">Locales</a></li>
+    </ul>
+</nav>
+<main>
+    <?php
+    require 'conexion.php';
 
-//Crear la bbdd
-$cadenaSQL = "CREATE DATABASE IF NOT EXISTS pizzeria COLLATE utf8_spanish_ci";
-if ($db->query($cadenaSQL) === TRUE) {
-    echo "<h2>Base de datos comentarios creada con éxito (o ya existe)</h2>";
-} else {
-    echo "<h2>ERROR en la creación de la Base de Datos comentarios</h2>";
-    exit();
-}
+    //Crear la bbdd
+    $cadenaSQL = "CREATE DATABASE IF NOT EXISTS pizzeria COLLATE utf8_spanish_ci";
 
-//crear la table
-$db->select_db("pizzeria");
+    //Si va sbien creo la tabla.
+    if ($db->query($cadenaSQL) === TRUE) {
 
-$crearTabla = "CREATE TABLE IF NOT EXISTS comentarios (id INT NOT NULL AUTO_INCREMENT,
- nombre VARCHAR(30) NOT NULL,apellidos VARCHAR(60) NOT NULL, email VARCHAR(60) NOT NULL,
-  texto VARCHAR(500) NOT NULL, PRIMARY KEY (id))";
+        //crear la tabla
+        $db->select_db("pizzeria");
 
-if ($db->query($crearTabla) === TRUE) {
-    echo "<p>Tabla Articulo creada con éxito o ya existe</p>";
-} else {
-    echo "<p>ERROR en la creación de la tabla</p>";
-    exit();
-}
-$db->select_db("comentarios");
+        $crearTabla = "CREATE TABLE IF NOT EXISTS comentarios (id INT NOT NULL AUTO_INCREMENT,
+        nombre VARCHAR(30) NOT NULL,apellidos VARCHAR(60) NOT NULL, email VARCHAR(60) NOT NULL,
+        texto VARCHAR(500) NOT NULL, PRIMARY KEY (id))";
 
-$consultaPre =
-    $db->prepare("INSERT INTO comentarios(nombre,apellidos,email,texto) VALUES (?,?,?,?)");
+        //Si se crea con exito inserto el comentario.
+        if ($db->query($crearTabla) === TRUE) {
 
-$consultaPre->bind_param('ssss',
-    $_POST["nombre"], $_POST["apellidos"], $_POST["email"], $_POST["comentario"]);
+            //insertar comentario
+            $db->select_db("comentarios");
 
-$consultaPre->execute();
+            $consultaPre =
+                $db->prepare("INSERT INTO comentarios(nombre,apellidos,email,texto) VALUES (?,?,?,?)");
 
-echo "<p>Filas agregadas: " . $consultaPre->affected_rows . "</p>";
+            $consultaPre->bind_param('ssss',
+                $_POST["nombre"], $_POST["apellidos"], $_POST["email"], $_POST["comentario"]);
 
-$consultaPre->close();
-$db->close();
-?>
+            $consultaPre->execute();
+
+            $consultaPre->close();
+
+            //Meter aqui lo que quiero que muestre la pagina de la que se
+            // çinserte el comentario en plan mensaje de agradecimiento guapo o tal.
+            echo "<h1>Muchas gracias por sus sugerencias.</h1>
+            <p>Gracias a sus comentarios nos ayuda a mejorar el sitio para proporcionarle una mejor esperiencia.</p>";
+
+
+        } else {
+            echo "<p>Se ha producido  un error por favor intentelo mas tarde.</p>";
+            exit();
+        }
+
+    } else {
+        echo "<p>Se ha producido  un error por favor intentelo mas tarde.</p>";
+        exit();
+    }
+
+    //Cerrar la conexion
+    $db->close();
+    ?>
+</main>
+<footer>
+    <div>
+        <span>
+            &copy; Copyright 2018 - Pizzería EII -  Derechos reservados
+        </span>
+        <span>
+                Pagina web hecha por:
+                <a href="mailto:uo236974@uniovi.es">Martín Peláez Díaz</a>
+            </span>
+    </div>
+
+    <div>
+        <h3>Mapa web</h3>
+        <ul>
+            <li><a href="../index.html">Principal</a></li>
+            <li><a href="../html/conocenos.html">Conócenos</a></li>
+            <li><a href="../html/productos.html">Productos</a></li>
+            <li><a href="../html/contacto.html">Contacto</a></li>
+            <li><a href="../html/locales.html">Locales</a></li>
+        </ul>
+    </div>
+
+    <div class="accesibilidad">
+
+    </div>
+</footer>
+
+</body>
+</html>
