@@ -42,6 +42,20 @@ class Carrito {
         tramitar.removeAttribute("hidden");
     }
 
+    getElementos(){
+        return JSON.stringify(this.elementos);
+    }
+
+    guardarPedido(){
+        sessionStorage.setItem("pedido",this.getElementos());
+        //cargar el html con el formulario
+    }
+
+    borrarPedido(){
+        sessionStorage.clear();
+    }
+
 }
 
 let carrito = new Carrito();
+carrito.borrarPedido();
