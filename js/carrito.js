@@ -42,16 +42,17 @@ class Carrito {
         tramitar.removeAttribute("hidden");
     }
 
-    getElementos(){
+    getElementos() {
         return JSON.stringify(this.elementos);
     }
 
-    guardarPedido(){
-        sessionStorage.setItem("pedido",this.getElementos());
-        //cargar el html con el formulario
+    guardarPedido() {
+        sessionStorage.setItem("pedido", this.getElementos());
+
+        location.replace("../html/formalizarPedido.html");
     }
 
-    borrarPedido(){
+    borrarPedido() {
         sessionStorage.clear();
     }
 
