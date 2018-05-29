@@ -56,7 +56,21 @@
                     </ul>
                 </nav>
                 <main>
+                    <aside>
+                        <table id="carroCompra" hidden="true">
+                            <tr>
+                                <th>Pizza</th>
+                                <th>Precio</th>
+                            </tr>
+                        </table>
+
+                        <p id="total" hidden="true"></p>
+
+                        <input hidden="true" type="button" id="pedido" onclick="" value="Tramitar pedido"/>
+                    </aside>
+
                     <section>
+
                         <h1>Pizzas</h1>
                         <xsl:for-each select="pizzas/pizza">
                             <div>
