@@ -31,7 +31,22 @@ class TramitarPedido {
         this.formulario = document.querySelector("form[name='reserva']");
         let valido = this.formulario.checkValidity();
         if (valido) {
-            this.formulario.submit();
+            /*
+            Vale, hasta aqui parece que funciona.
+            Me faltaria crear el json con los datos del formulario para mandarlos y sacar los de el pedido.
+             */
+            $.ajax({
+                url: "../php/tramitarPedido.php",
+                type: "POST",
+                data: {},
+                dataType: "json",
+                success: function (data) {
+                    alert("paso por aqui por lo menos.");
+                },
+                error: function () {
+                    alert("¡Tenemos problemas! No pollas funciona.");
+                }
+            });
         }
     }
 

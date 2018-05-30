@@ -11,7 +11,6 @@
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
                 <script type="text/javascript" src="../js/reloj.js" language="JavaScript"></script>
                 <script type="text/javascript" src="../js/carrito.js" language="JavaScript"></script>
-                <script type="text/javascript" src="../js/tramitarPedido.js" language="JavaScript"></script>
                 <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
                 <title>Pizzería EII</title>
             </head>
