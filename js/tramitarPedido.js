@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 class TramitarPedido {
 
@@ -35,10 +35,19 @@ class TramitarPedido {
             Vale, hasta aqui parece que funciona.
             Me faltaria crear el json con los datos del formulario para mandarlos y sacar los de el pedido.
              */
+
+            //sacar nombre, apellido e email del formulario.
+            let datosUser = {
+                "nombre": this.formulario.nombre.value,
+                "apellidos": this.formulario.apellidos.value,
+                "email": this.formulario.email.value
+            };
+            datosUser = JSON.stringify(datosUser);
+            let pedido = sessionStorage.getItem("pedido");
             $.ajax({
                 url: "../php/tramitarPedido.php",
                 type: "POST",
-                data: {},
+                data: {"datosUser": datosUser, "pedido": pedido},
                 dataType: "json",
                 success: function (data) {
                     alert("paso por aqui por lo menos.");

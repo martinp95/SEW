@@ -25,9 +25,11 @@
                         <li id="seconds"></li>
                     </ul>
                 </div>
+
                 <header>
                     <a href="../index.html" title="Ir a la página principal">Pizzería EII</a>
                 </header>
+
                 <nav>
                     <ul id="lista_menu">
                         <li>
@@ -55,6 +57,7 @@
                         </li>
                     </ul>
                 </nav>
+
                 <main>
                     <aside>
                         <table id="carroCompra" hidden="true">
