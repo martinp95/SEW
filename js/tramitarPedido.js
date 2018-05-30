@@ -50,7 +50,7 @@ class TramitarPedido {
                 data: {"datosUser": datosUser, "pedido": pedido},
                 dataType: "json",
                 success: function (data) {
-                    alert("paso por aqui por lo menos.");
+                    alert("paso por aqui por lo menos." + data);
                 },
                 error: function () {
                     alert("¡Tenemos problemas! No pollas funciona.");
