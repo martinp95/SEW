@@ -14,7 +14,7 @@ if ($db->query($cadenaSQL) === TRUE) {
         nombre VARCHAR(30) NOT NULL,apellidos VARCHAR(60) NOT NULL, email VARCHAR(60) NOT NULL,PRIMARY KEY (id))";
 
     $crearTablaPizzasPedido = "CREATE TABLE IF NOT EXISTS  pizzaPedido(id INT NOT NULL AUTO_INCREMENT,
-        nombre VARCHAR(30) NOT NULL, precio DOUBLE NOT NULL, idUserPedido INT NOT NULL, PRIMARY KEY (id),
+        nombre VARCHAR(30) NOT NULL, precio  VARCHAR(30) NOT NULL, idUserPedido INT NOT NULL, PRIMARY KEY (id),
         FOREIGN KEY (idUserPedido) REFERENCES userPedido(id))";
 
     //Si se crea bien la tabla de user, creo la de pizzas
@@ -37,26 +37,30 @@ if ($db->query($cadenaSQL) === TRUE) {
 
             $consultaPre->close();
 
-            $lastID = $db->insert_id();
-
             //toca ahora insertar las pizzas, al ser un array tengo que ver como se hace
             // y necesito tmb el id del onjeto que acabo de insertar.
 
             $db->select_db("pizzaPedido");
 
-            $consultaPizzas = $db->prepare("INSERT INTO pizzaPedido(nombre,precio,idUserPedido) VALUES (?,?,?)");
+            $consultaPizzas = $db->prepare("INSERT INTO pizzaPedido(nombre,precio) VALUES (?,?)");
+
+            $pedidoPizza = json_decode($_POST['pedido']);
+
+
+
+            echo json_encode($pedidoPizza[0]->nombre);
 
         } else {
-            //Si va mal la cosa
+
+            echo json_encode('["datosUser": "erroraco"]');
         }
     } else {
-        //Si va mal la cosa.
+
+        echo json_encode('["datosUser": "erroraco"]');
     }
 } else {
-    //Si va mal la cosa lo que devuelva el servicio tendra que hacerme entrar por fail no por success.
+
+    echo json_encode('["datosUser": "erroraco"]');
 }
-
-
-echo json_encode($_POST['datosUser']);
 ?>
 

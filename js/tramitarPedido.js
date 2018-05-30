@@ -44,6 +44,7 @@ class TramitarPedido {
             };
             datosUser = JSON.stringify(datosUser);
             let pedido = sessionStorage.getItem("pedido");
+
             $.ajax({
                 url: "../php/tramitarPedido.php",
                 type: "POST",
@@ -52,8 +53,8 @@ class TramitarPedido {
                 success: function (data) {
                     alert("paso por aqui por lo menos." + data);
                 },
-                error: function () {
-                    alert("¡Tenemos problemas! No pollas funciona.");
+                error: function (data) {
+                    alert("¡Tenemos problemas! No pollas funciona." + data);
                 }
             });
         }
