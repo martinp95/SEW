@@ -10,50 +10,34 @@ if ($db->query($cadenaSQL) === TRUE) {
 
     $db->select_db("pizzeria");
 
-    $crearTablaUserPedido = "CREATE TABLE IF NOT EXISTS userPedido (id INT NOT NULL AUTO_INCREMENT,
-        nombre VARCHAR(30) NOT NULL,apellidos VARCHAR(60) NOT NULL, email VARCHAR(60) NOT NULL,PRIMARY KEY (id))";
-
-    $crearTablaPizzasPedido = "CREATE TABLE IF NOT EXISTS  pizzaPedido(id INT NOT NULL AUTO_INCREMENT,
-        nombre VARCHAR(30) NOT NULL, precio  VARCHAR(30) NOT NULL, idUserPedido INT NOT NULL, PRIMARY KEY (id),
-        FOREIGN KEY (idUserPedido) REFERENCES userPedido(id))";
+    $crearTablaPedido = "CREATE TABLE IF NOT EXISTS Pedido (id INT NOT NULL AUTO_INCREMENT,
+        nombre VARCHAR(30) NOT NULL,apellidos VARCHAR(60) NOT NULL, email VARCHAR(60) NOT NULL,
+        nombrePizza VARCHAR(30) NOT NULL, precio  VARCHAR(30) NOT NULL,PRIMARY KEY (id))";
 
     //Si se crea bien la tabla de user, creo la de pizzas
-    if ($db->query($crearTablaUserPedido) === TRUE) {
+    if ($db->query($crearTablaPedido) === TRUE) {
 
-        if ($db->query($crearTablaPizzasPedido) === TRUE) {
 
-            //insertar el usuario del pedido.
-            $db->select_db("userPedido");
+        //insertar el usuario del pedido.
+        $db->select_db("Pedido");
 
-            $consultaPre =
-                $db->prepare("INSERT INTO userPedido(nombre,apellidos,email) VALUES (?,?,?)");
+        $consultaPre =
+            $db->prepare("INSERT INTO Pedido(nombre,apellidos,email,nombrePizza,precio) VALUES (?,?,?,?,?)");
 
-            $usuarioPedido = json_decode($_POST['datosUser']);
+        $usuarioPedido = json_decode($_POST['datosUser']);
+        $pedidoPizza = json_decode($_POST['pedido']);
 
-            $consultaPre->bind_param('sss',
-                $usuarioPedido->nombre, $usuarioPedido->apellidos, $usuarioPedido->email);
-
+        foreach ($pedidoPizza as $valor) {
+            $consultaPre->bind_param('sssss',
+                $usuarioPedido->nombre, $usuarioPedido->apellidos, $usuarioPedido->email,
+                $valor->nombre, $valor->precio);
             $consultaPre->execute();
-
-            $consultaPre->close();
-
-            //toca ahora insertar las pizzas, al ser un array tengo que ver como se hace
-            // y necesito tmb el id del onjeto que acabo de insertar.
-
-            $db->select_db("pizzaPedido");
-
-            $consultaPizzas = $db->prepare("INSERT INTO pizzaPedido(nombre,precio) VALUES (?,?)");
-
-            $pedidoPizza = json_decode($_POST['pedido']);
-
-
-
-            echo json_encode($pedidoPizza[0]->nombre);
-
-        } else {
-
-            echo json_encode('["datosUser": "erroraco"]');
         }
+
+        $consultaPre->close();
+
+        echo json_encode($pedidoPizza[0]->nombre);
+
     } else {
 
         echo json_encode('["datosUser": "erroraco"]');

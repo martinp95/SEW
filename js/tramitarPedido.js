@@ -31,12 +31,6 @@ class TramitarPedido {
         this.formulario = document.querySelector("form[name='reserva']");
         let valido = this.formulario.checkValidity();
         if (valido) {
-            /*
-            Vale, hasta aqui parece que funciona.
-            Me faltaria crear el json con los datos del formulario para mandarlos y sacar los de el pedido.
-             */
-
-            //sacar nombre, apellido e email del formulario.
             let datosUser = {
                 "nombre": this.formulario.nombre.value,
                 "apellidos": this.formulario.apellidos.value,
