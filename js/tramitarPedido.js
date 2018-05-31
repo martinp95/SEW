@@ -45,10 +45,11 @@ class TramitarPedido {
                 data: {"datosUser": datosUser, "pedido": pedido},
                 dataType: "json",
                 success: function (data) {
-                    alert("paso por aqui por lo menos." + data);
+                    alert(data);
+                    location.replace("../index.html");
                 },
-                error: function (data) {
-                    alert("¡Tenemos problemas! No pollas funciona." + data);
+                error: function () {
+                    alert("Se ha producido un error al grabar su pedido por favor inténtolo mas tarde.");
                 }
             });
         }

@@ -35,12 +35,12 @@ if ($db->query($cadenaSQL) === TRUE) {
         }
         $consultaPre->close();
 
-        echo json_encode($pedidoPizza[0]->nombre);
+        echo json_encode("Gracias por confiar en nosotros su pedido se ha tramitado con exito.");
 
     } else {
-        echo json_encode('["datosUser": "erroraco"]');
+        echo json_encode("Se ha producido un error al grabar su pedido por favor intentolo mas tarde.");
     }
 } else {
-    echo json_encode('["datosUser": "erroraco"]');
+    echo json_encode("Se ha producido un error al grabar su pedido por favor intentolo mas tarde.");
 }
 ?>
