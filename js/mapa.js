@@ -82,7 +82,7 @@ class Mapa {
             });
         }
 
-        alert('Error: ' + error.message);
+        console.log('Error: ' + error.message);
     }
 
 }
