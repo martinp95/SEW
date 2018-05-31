@@ -33,18 +33,14 @@ if ($db->query($cadenaSQL) === TRUE) {
                 $valor->nombre, $valor->precio);
             $consultaPre->execute();
         }
-
         $consultaPre->close();
 
         echo json_encode($pedidoPizza[0]->nombre);
 
     } else {
-
         echo json_encode('["datosUser": "erroraco"]');
     }
 } else {
-
     echo json_encode('["datosUser": "erroraco"]');
 }
 ?>
-
