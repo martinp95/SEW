@@ -14,6 +14,7 @@
                 <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
                 <link href="../css/reloj.css" rel="stylesheet" type="text/css"/>
                 <link href="../css/navBar.css" rel="stylesheet" type="text/css"/>
+                <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
                 <title>Pizzería EII</title>
             </head>
             <body>
