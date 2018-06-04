@@ -153,6 +153,12 @@
 
                     <div class="accesibilidad">
                         <h3>Sobre la accesibilidad</h3>
+                        <p>Web optimizada para su uso en los siguientes navegadores:
+                            <br></br>
+                            Internet Explorer 8, Firefox 2.0 o superior, Safari, Ópera y Chrome.
+                            <br></br>
+                            Sitio web creado con CSS &#38; HTML válidos. • Accesibilidad AAA.
+                        </p>
                     </div>
                 </footer>
             </body>
