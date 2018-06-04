@@ -1,6 +1,18 @@
 @charset "utf-8";
+
 body {
     max-width: 60%;
     margin: auto;
     padding: 10px;
+    text-align: center;
+}
+
+header {
+    clear: both;
+}
+
+header img {
+    width: 30%;
+    height: 30%;
+    border: 0;
 }

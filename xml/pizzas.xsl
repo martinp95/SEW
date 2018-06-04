@@ -30,7 +30,9 @@
                 </div>
 
                 <header>
-                    <a href="../index.html" title="Ir a la página principal">Pizzería EII</a>
+                    <a href="../index.html" title="Ir a la página principal">
+                        <img src="../img/PizzeriaEII.png" alt="Pizzeria EII"></img>
+                    </a>
                 </header>
 
                 <nav>
