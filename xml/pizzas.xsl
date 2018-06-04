@@ -120,39 +120,39 @@
                     </section>
                 </main>
                 <footer>
-                    <div>
-                        <span>
+                    <div id="copy">
+                        <span class="copy">
                             &#169; Copyright 2018 - Pizzería EII - Derechos reservados
                         </span>
-                        <span>
+                        <span class="contacto_footer">
                             Pagina web hecha por:
                             <a href="mailto:uo236974@uniovi.es">Martín Peláez Díaz</a>
                         </span>
                     </div>
 
-                    <div>
+                    <div class="mapa_web">
                         <h3>Mapa web</h3>
                         <ul>
                             <li>
                                 <a href="../index.html">Principal</a>
                             </li>
                             <li>
-                                <a href="../html/conocenos.html">Conócenos</a>
+                                <a href="conocenos.html">Conócenos</a>
                             </li>
                             <li>
-                                <a href="../html/productos.html">Productos</a>
+                                <a href="productos.html">Productos</a>
                             </li>
                             <li>
-                                <a href="../html/contacto.html">Contacto</a>
+                                <a href="contacto.html">Contacto</a>
                             </li>
                             <li>
-                                <a href="../html/locales.html">Locales</a>
+                                <a href="locales.html">Locales</a>
                             </li>
                         </ul>
                     </div>
 
                     <div class="accesibilidad">
-
+                        <h3>Sobre la accesibilidad</h3>
                     </div>
                 </footer>
             </body>
