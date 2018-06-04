@@ -160,6 +160,7 @@
                             Sitio web creado con CSS &#38; HTML válidos. • Accesibilidad AAA.
                         </p>
                     </div>
+                    <div class="clear"></div>
                 </footer>
             </body>
         </html>

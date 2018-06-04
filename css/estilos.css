@@ -4,6 +4,7 @@ body {
     max-width: 60%;
     margin: auto;
     padding: 10px;
+    background-color: antiquewhite;
 }
 
 body header {
@@ -23,6 +24,7 @@ header img {
 /*
 Estilos del contenidos del pie de pagina de las paginas web.
  */
+
 #copy {
     margin-bottom: 1%;
     padding-top: 5%;
@@ -61,6 +63,7 @@ Estilos del contenidos del pie de pagina de las paginas web.
 
 .mapa_web a {
     text-decoration: none;
+    color: #000;
 }
 
 .mapa_web a:hover {
@@ -70,4 +73,8 @@ Estilos del contenidos del pie de pagina de las paginas web.
 .accesibilidad {
     float: right;
     text-align: right;
+}
+
+.clear{
+    clear: both;
 }
