@@ -9,12 +9,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/reloj.js" language="JavaScript"></script>
     <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/reloj.css" rel="stylesheet" type="text/css"/>
     <title>Pizzería EII</title>
 </head>
 <body>
-<div id="reloj">
+<div id="clockDate">
     <p id="date"></p>
-    <ul>
+    <ul id="clock">
         <li id="hours"></li>
         <li class="dot">:</li>
         <li id="minutes"></li>

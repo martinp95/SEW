@@ -12,12 +12,13 @@
                 <script type="text/javascript" src="../js/reloj.js" language="JavaScript"></script>
                 <script type="text/javascript" src="../js/carrito.js" language="JavaScript"></script>
                 <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
+                <link href="../css/reloj.css" rel="stylesheet" type="text/css"/>
                 <title>Pizzería EII</title>
             </head>
             <body>
-                <div id="reloj">
+                <div id="clockDate">
                     <p id="date"></p>
-                    <ul>
+                    <ul id="clock">
                         <li id="hours"></li>
                         <li class="dot">:</li>
                         <li id="minutes"></li>
