@@ -4,7 +4,7 @@ body {
     max-width: 60%;
     margin: auto;
     padding: 10px;
-    background-color: antiquewhite;
+    background-color: #faebd7;
 }
 
 body header {
@@ -21,6 +21,41 @@ header img {
     border: 0;
 }
 
+main{
+    padding-bottom: 5%;
+}
+
+.botonPrincipal{
+    width: 30%;
+    font-size: 16px;
+}
+
+p{
+    font-size: 120%;
+}
+
+h2{
+    font-size: 200%;
+}
+
+h3{
+    font-size: 130%;
+}
+
+.botonPizza{
+    width: 30%;
+    height: 30%;
+    border: #6b727c solid 2px;
+}
+
+.botonPizza:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#botonesProductos{
+    text-align: center;
+}
+
 /*
 Estilos del contenidos del pie de pagina de las paginas web.
  */
@@ -35,7 +70,7 @@ Estilos del contenidos del pie de pagina de las paginas web.
 }
 
 #copy a {
-    color: rgb(75, 84, 95);
+    color: #5365ff;
     text-decoration: none;
 }
 
@@ -64,6 +99,7 @@ Estilos del contenidos del pie de pagina de las paginas web.
 .mapa_web a {
     text-decoration: none;
     color: #000;
+    font-size: 90%;
 }
 
 .mapa_web a:hover {
@@ -73,8 +109,17 @@ Estilos del contenidos del pie de pagina de las paginas web.
 .accesibilidad {
     float: right;
     text-align: right;
+    font-size: 100%;
+}
+
+.accesibilidad p {
+    font-size: 90%;
 }
 
 .clear{
     clear: both;
+}
+
+footer{
+    border-top: 2px solid #6b727c;
 }

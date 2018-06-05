@@ -46,9 +46,18 @@
 </nav>
 <main>
     <section>
+
         <h2>¡Accede a nuestra magnifica oferta de pizzas!</h2>
-        <input type="button" onclick="location.href='../xml/pizzas.xml';" value="Pizzas tradicionales"/>
-        <input type="button" onclick="location.href='../xml/pizzasEspeciales.xml';" value="Pizzas especiales"/>
+
+        <div id="botonesProductos">
+            <input class="botonPizza" type="image" src="../img/romana.jpg" onclick="location.href='../xml/pizzas.xml';"
+                   alt="Pizzas tradicionales" title="Pulse para ver nuestras pizzas tradicionales"/>
+            <input class="botonPizza" type="image" src="../img/tioJoroba.jpg"
+                   title="Pulse para ver nuestras pizzas especiales"
+                   onclick="location.href='../xml/pizzasEspeciales.xml';"
+                   alt="Pizzas especiales"/>
+        </div>
+
     </section>
 </main>
 
