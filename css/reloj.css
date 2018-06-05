@@ -6,7 +6,7 @@
 
 #date {
     font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
-    font-size: 10px;
+    font-size: 11px;
     text-align: center;
     margin: 0 auto;
     height: 14px;
@@ -22,7 +22,7 @@
 
 #clock > li {
     display: inline;
-    font-size: 10px;
+    font-size: 11px;
     text-align: center;
     font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
 }
