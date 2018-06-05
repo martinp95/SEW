@@ -4,6 +4,7 @@
     <xsl:template match="/">
         <html lang="es">
             <head>
+                <meta charset="UTF-8"/>
                 <meta name="description" content="Página principal de la pagina web dedicada a la venta de pizzas"/>
                 <meta name="keywords" content="pizzas, pizzeria, carta"/>
                 <link rel="icon" href="../img/iconoPizza.jpg" type="image/jpg"/>

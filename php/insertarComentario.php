@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <meta name="description" content="Página principal de la pagina web dedicada a la venta de pizzas"/>
     <meta name="keywords" content="pizzas, pizzeria, carta, conocenos"/>
     <link rel="icon" href="../img/iconoPizza.jpg" type="image/jpg"/>
@@ -26,7 +26,7 @@
 </div>
 <header>
     <a href="../index.html" title="Ir a la página principal">
-        <img src="../img/PizzeriaEII.png" alt="Pizzeria EII">
+        <img src="../img/PizzeriaEII.png" alt="Pizzeria EII"/>
     </a>
 </header>
 <nav>
@@ -120,8 +120,8 @@
 
     <div class="accesibilidad">
         <h3>Sobre la accesibilidad</h3>
-        <p>Web optimizada para su uso en los siguientes navegadores:<br>
-            Internet Explorer 8, Firefox 2.0 o superior, Safari, Ópera y Chrome.<br>
+        <p>Web optimizada para su uso en los siguientes navegadores:<br/>
+            Internet Explorer 8, Firefox 2.0 o superior, Safari, Ópera y Chrome.<br/>
             Sitio web creado con CSS &amp; HTML válidos. • Accesibilidad AAA.</p>
     </div>
     <div class="clear"></div>
