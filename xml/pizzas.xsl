@@ -176,7 +176,7 @@
     </xsl:template>
 
     <xsl:template match="pizza">
-        <input type="button" id="añadir" onclick="carrito.addElemento('{./nombre}','{./precio}');" value="Añadir"/>
+        <input type="button" onclick="carrito.addElemento('{./nombre}','{./precio}');" value="Añadir"/>
     </xsl:template>
 
     <xsl:template match="rutaFoto">
