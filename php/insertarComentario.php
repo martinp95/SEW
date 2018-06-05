@@ -79,7 +79,7 @@
             //Meter aqui lo que quiero que muestre la pagina de la que se
             // çinserte el comentario en plan mensaje de agradecimiento guapo o tal.
             echo "<h1>Muchas gracias por sus sugerencias.</h1>
-            <p>Gracias a sus comentarios nos ayuda a mejorar el sitio para proporcionarle una mejor esperiencia.</p>";
+            <p>Gracias a sus comentarios nos ayuda a mejorar el sitio para proporcionarle una mejor experiencia.</p>";
 
 
         } else {
