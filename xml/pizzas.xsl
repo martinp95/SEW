@@ -96,7 +96,14 @@
                                         <br></br>
                                     </strong>
                                     <xsl:for-each select="ingredientes/ingrediente">
-                                        <xsl:value-of select="."/><xsl:text> </xsl:text>
+                                        <xsl:choose>
+                                            <xsl:when test="position() != last()">
+                                                <xsl:value-of select="."/><xsl:text>, </xsl:text>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:value-of select="."/><xsl:text>.</xsl:text>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
                                     </xsl:for-each>
                                 </p>
                                 <p>
