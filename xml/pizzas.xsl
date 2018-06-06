@@ -31,9 +31,11 @@
                 </div>
 
                 <header>
-                    <a href="../index.html" title="Ir a la página principal">
-                        <img src="../img/PizzeriaEII.png" alt="Pizzeria EII"></img>
-                    </a>
+                    <h1>
+                        <a href="../index.html" title="Ir a la página principal">
+                            <img src="../img/PizzeriaEII.png" alt="Pizzeria EII"></img>
+                        </a>
+                    </h1>
                 </header>
 
                 <nav>

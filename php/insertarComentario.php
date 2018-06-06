@@ -25,9 +25,9 @@
     </ul>
 </div>
 <header>
-    <a href="../index.html" title="Ir a la página principal">
+    <h1><a href="../index.html" title="Ir a la página principal">
         <img src="../img/PizzeriaEII.png" alt="Pizzeria EII"/>
-    </a>
+    </a></h1>
 </header>
 <nav>
     <ul id="lista_menu">
